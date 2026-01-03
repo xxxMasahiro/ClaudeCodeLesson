@@ -1,0 +1,348 @@
+/* ===========================
+   CSS Custom Properties
+   =========================== */
+:root {
+  --primary-color: #4a90e2;
+  --primary-hover: #357abd;
+  --success-color: #5cb85c;
+  --danger-color: #d9534f;
+  --danger-hover: #c9302c;
+  --text-color: #333;
+  --text-light: #777;
+  --text-completed: #999;
+  --border-color: #ddd;
+  --bg-color: #f5f5f5;
+  --card-bg: #ffffff;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* ===========================
+   CSS Reset & Base Styles
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   Container & Layout
+   =========================== */
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   Header
+   =========================== */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+/* ===========================
+   Main Content Area
+   =========================== */
+.main {
+  flex: 1;
+}
+
+/* ===========================
+   TODO Form
+   =========================== */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: var(--transition);
+}
+
+.todo-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.todo-input::placeholder {
+  color: #aaa;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+.btn-edit {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #4cae4c;
+}
+
+.btn-delete {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: var(--danger-hover);
+}
+
+/* ===========================
+   TODO Stats
+   =========================== */
+.todo-stats {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+.separator {
+  margin: 0 8px;
+}
+
+/* ===========================
+   TODO List
+   =========================== */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.todo-item:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   TODO Item Elements
+   =========================== */
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.todo-text-input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  outline: none;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Completed State
+   =========================== */
+.todo-item.completed {
+  opacity: 0.7;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: var(--text-completed);
+}
+
+/* ===========================
+   Empty State
+   =========================== */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-light);
+}
+
+.empty-state p:first-child {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.empty-state-hint {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.empty-state.hidden {
+  display: none;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-light);
+  font-size: 0.875rem;
+  margin-top: 40px;
+}
+
+/* ===========================
+   Animations
+   =========================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-item {
+  animation: fadeIn 0.3s ease;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .todo-form {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-wrap: wrap;
+  }
+
+  .todo-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* ===========================
+   Accessibility
+   =========================== */
+.btn:focus,
+.todo-input:focus,
+.todo-checkbox:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
