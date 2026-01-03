@@ -243,5 +243,13 @@ git push
 
 ---
 
+## 関連ドキュメント
+
+- [📚 ドキュメント索引](./README.md) - docs/ の目的別読む順番
+- [🔧 GitHub Pages トラブルシューティング](./GITHUB_PAGES_TROUBLESHOOTING.md) - デプロイ時のよくあるトラブルと対処法
+- [📝 Git 初期セットアップ手順](./CLAUDE_CODE_GIT_INITIAL_PUSH.md) - Claude Code を使った初回 push 手順
+
+---
+
 **作成日：** 2026-01-04
 **対象環境：** Vite + GitHub Pages + GitHub Actions

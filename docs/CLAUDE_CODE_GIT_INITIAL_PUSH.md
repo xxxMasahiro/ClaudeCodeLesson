@@ -305,9 +305,11 @@ git branch -a
 
 ---
 
-## 関連テンプレート
+## 関連ドキュメント
 
-- [Vite + GitHub Pages デプロイテンプレート](../docs/VITE_GITHUB_PAGES_TEMPLATE.md) - リポジトリ名非依存で Vite プロジェクトを GitHub Pages にデプロイする方法
+- [📚 ドキュメント索引](./README.md) - docs/ の目的別読む順番
+- [🚀 Vite + GitHub Pages デプロイテンプレート](./VITE_GITHUB_PAGES_TEMPLATE.md) - リポジトリ名非依存でデプロイする方法
+- [🔧 GitHub Pages トラブルシューティング](./GITHUB_PAGES_TROUBLESHOOTING.md) - よくあるトラブルと対処法
 
 ---
 
